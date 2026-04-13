@@ -16,8 +16,8 @@
             "name": "Launch Chrome",
             "request": "launch",
             "type": "chrome",
-            "url": "file://${workspaceFolder}/TestSite1/index.html",
-            "webRoot": "${workspaceFolder}/TestSite1"
+            "url": "file://${workspaceFolder}/docs/index.html",
+            "webRoot": "${workspaceFolder}/docs"
         }
     ]
 }
