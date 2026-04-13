@@ -1,7 +1,7 @@
 name: Playwright Tests
 on:
   push:
-    branches: [ main, master, CI-Testing-Branch, LiveBranch ]
+    branches: [ main, master, DevBranch_rosado ]
   pull_request:
     branches: [ main, master, CI-Testing-Branch, LiveBranch ]
 jobs:
