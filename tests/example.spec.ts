@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import * as path from 'path';
 import { pathToFileURL } from 'url';
 
-const indexFileUrl = pathToFileURL(path.resolve('src/TestSite1/index.html')).href;
+const indexFileUrl = pathToFileURL(path.resolve('docs/index.html')).href;
 
 test('has title', async ({ page }) => {
   await page.goto(indexFileUrl);
