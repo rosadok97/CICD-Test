@@ -1,0 +1,19 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "sourceMap": true,
+        "target": "es5",
+        "ignoreDeprecations": "6.0",
+        "experimentalDecorators": true,
+        "noImplicitAny": false,
+        "types": ["node"]
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "filesGlob": [
+        "src/**/*.ts",
+        "test/**/*.ts",
+        "typings/index.d.ts"
+    ]
+}

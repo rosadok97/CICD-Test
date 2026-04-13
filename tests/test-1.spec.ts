@@ -1,7 +1,11 @@
 import { test, expect } from '@playwright/test';
+import * as path from 'path';
+import { pathToFileURL } from 'url';
+
+const indexFileUrl = pathToFileURL(path.resolve('src/TestSite1/index.html')).href;
 
 test('RecordTest', async ({ page }) => {
-  await page.goto(`file:///${path.resolve('src/TestSite1/index.html')}`);
+  await page.goto(indexFileUrl);
   await page.getByRole('link', { name: 'Get Started' }).click();
   await expect(page.locator('h1')).toContainText('Get Started');
   await page.getByRole('link', { name: 'FAQ page' }).click();

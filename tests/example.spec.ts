@@ -1,15 +1,18 @@
 import { test, expect } from '@playwright/test';
-import path from 'path';
+import * as path from 'path';
+import { pathToFileURL } from 'url';
+
+const indexFileUrl = pathToFileURL(path.resolve('src/TestSite1/index.html')).href;
 
 test('has title', async ({ page }) => {
-  await page.goto(`file:///${path.resolve('src/TestSite1/index.html')}`);
+  await page.goto(indexFileUrl);
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Home/);
 });
 
 test('get started link', async ({ page }) => {
-  await page.goto(`file:///${path.resolve('src/TestSite1/index.html')}`);
+  await page.goto(indexFileUrl);
 
   // Click the get started link.
   await page.getByRole('link', { name: 'Get Started' }).click();
