@@ -1,14 +1,14 @@
 import { test, expect } from '@playwright/test';
 
 test('has title', async ({ page }) => {
-  await page.goto('file:///C:/Users/rosad/Documents/VS%20Workspace/TestSite1/index.html');
+  await page.goto('file:///C:/Users/rosad/Documents/VS%20Workspace/src/TestSite1/index.html');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Home/);
 });
 
 test('get started link', async ({ page }) => {
-  await page.goto('file:///C:/Users/rosad/Documents/VS%20Workspace/TestSite1/index.html');
+  await page.goto('file:///C:/Users/rosad/Documents/VS%20Workspace/src/TestSite1/index.html');
 
   // Click the get started link.
   await page.getByRole('link', { name: 'Get Started' }).click();
